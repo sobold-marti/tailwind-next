@@ -1,4 +1,47 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography" {
+  className: wysiwyg
+};
+
+@theme {
+  /* --*: initial; */
+  --spacing-small: 8px;
+  --spacing-regular: 16px;
+  --spacing-large: 32px;
+  --breakpoint-sm: 575px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1200px;
+  --breakpoint-xl: 1440px;
+  --size-h1: 45px;
+  --line-height-h1: 1.5;
+  --size-h2: 35px;
+  --line-height-h2: 1.2;
+  --size-h3: 30px;
+  --line-height-h3: 1;
+  --size-h4: 26px;
+  --line-height-h4: .8;
+  --size-h5: 22px;
+  --line-height-h5: .5;
+  --size-h6: 20px;
+  --line-height-h6: 1;
+  --font-bold: 600;
+
+  --animate-width-slide: width-slide 0.3s ease-out;
+  @keyframes width-slide {
+    0% {
+      width: 0;
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    50% {
+      width: 100%;
+    }
+  }
+}
 
 :root {
   --background: #ffffff;
@@ -10,6 +53,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-caveat: var(--font-caveat);
+  --font-lato: var(--font-lato);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +68,41 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/** Typography */
+.h1 {
+  font-size: var(--size-h1);
+  line-height: var(--line-height-h1);
+  font-weight: var(--font-bold);
+}
+
+.h2 {
+  font-size: var(--size-h2);
+  line-height: var(--line-height-h2);
+  font-weight: var(--font-bold);
+}
+
+.h3 {
+  font-size: var(--size-h3);
+  line-height: var(--line-height-h3);
+  font-weight: var(--font-bold);
+}
+
+.h4 {
+  font-size: var(--size-h4);
+  line-height: var(--line-height-h4);
+  font-weight: var(--font-bold);
+}
+
+.h5 {
+  font-size: var(--size-h5);
+  line-height: var(--line-height-h5);
+  font-weight: var(--font-bold);
+}
+
+.h6 {
+  font-size: var(--size-h6);
+  line-height: var(--line-height-h6);
+  font-weight: var(--font-bold);
 }
