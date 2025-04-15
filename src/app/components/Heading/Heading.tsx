@@ -1,7 +1,7 @@
 import { JSX } from "react";
 
 type HeadingProps = {
-    tag: keyof JSX.IntrinsicElements;
+    tag: keyof JSX.IntrinsicElements; // It means that it must be a valid HTML tag name
     customTagClass?: string;
     className?: string;
     text: string;
